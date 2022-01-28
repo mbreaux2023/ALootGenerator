@@ -6,9 +6,26 @@ namespace ALootGenerator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Checks if the user added a command line argument
+            // Also checks if the first argument is "test"
+            if (args.Length > 0 && args [0] == "test")
+            {
+                TestAll();
+                return; // exits the program
+            }
+
+            // other wise, the program continues executing
         }
 
+
+        public static void TestAll()
+        {
+            bool testGetValidInt = TestGetValidInt.RunTest();
+            Console.WriteLine($"Test GetValidInt(filename): {testGetValidInt}");
+            
+            bool testGenerateRandomLoot = TestGenerateRandomLoot.RunTest();
+            Console.WriteLine($"Test GenerateRandomLoot(options): {testGenerateRandomLoot}");
+        }
         public static string GetValidInt()
         {
             // 1. Validate the prompt is a string

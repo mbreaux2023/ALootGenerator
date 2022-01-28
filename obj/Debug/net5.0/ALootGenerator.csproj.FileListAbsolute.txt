@@ -1,0 +1,15 @@
+/Users/mbreaux/Documents/GitHub/ALootGenerator/bin/Debug/net5.0/ALootGenerator.deps.json
+/Users/mbreaux/Documents/GitHub/ALootGenerator/bin/Debug/net5.0/ALootGenerator.runtimeconfig.json
+/Users/mbreaux/Documents/GitHub/ALootGenerator/bin/Debug/net5.0/ALootGenerator.runtimeconfig.dev.json
+/Users/mbreaux/Documents/GitHub/ALootGenerator/bin/Debug/net5.0/ALootGenerator.dll
+/Users/mbreaux/Documents/GitHub/ALootGenerator/bin/Debug/net5.0/ref/ALootGenerator.dll
+/Users/mbreaux/Documents/GitHub/ALootGenerator/bin/Debug/net5.0/ALootGenerator.pdb
+/Users/mbreaux/Documents/GitHub/ALootGenerator/obj/Debug/net5.0/ALootGenerator.csproj.AssemblyReference.cache
+/Users/mbreaux/Documents/GitHub/ALootGenerator/obj/Debug/net5.0/ALootGenerator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mbreaux/Documents/GitHub/ALootGenerator/obj/Debug/net5.0/ALootGenerator.AssemblyInfoInputs.cache
+/Users/mbreaux/Documents/GitHub/ALootGenerator/obj/Debug/net5.0/ALootGenerator.AssemblyInfo.cs
+/Users/mbreaux/Documents/GitHub/ALootGenerator/obj/Debug/net5.0/ALootGenerator.csproj.CoreCompileInputs.cache
+/Users/mbreaux/Documents/GitHub/ALootGenerator/obj/Debug/net5.0/ALootGenerator.dll
+/Users/mbreaux/Documents/GitHub/ALootGenerator/obj/Debug/net5.0/ref/ALootGenerator.dll
+/Users/mbreaux/Documents/GitHub/ALootGenerator/obj/Debug/net5.0/ALootGenerator.pdb
+/Users/mbreaux/Documents/GitHub/ALootGenerator/obj/Debug/net5.0/ALootGenerator.genruntimeconfig.cache
