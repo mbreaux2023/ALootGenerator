@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ALootGenerator
 {
@@ -8,7 +9,25 @@ namespace ALootGenerator
 
         public static bool RunTest()
         {
-            return false;
+
+            List<string> elements = new List<string>();
+            elements.Add("fire");
+            // elements.Add("water");
+            // elements.Add("lightning");
+            List<string> powers = new List<string>();
+            elements.Add("Haki");
+            // elements.Add("Chakra");
+            // elements.Add("Magic");
+            string result = Program.GenerateRandomLoot("sword", elements, powers); 
+            // int result = Program.GenerateRandomLoot("what type of weapon do you want?");
+
+            if (!result.StartsWith("sword fire Haki"))
+            {
+                Console.Error.WriteLine($"The result was expected to be {elements}, {powers}, sword");
+                return false;
+            }
+
+            return true;
         }
     }
 }

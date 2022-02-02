@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ALootGenerator
 {
@@ -26,7 +27,7 @@ namespace ALootGenerator
             bool testGenerateRandomLoot = TestGenerateRandomLoot.RunTest();
             Console.WriteLine($"Test GenerateRandomLoot(options): {testGenerateRandomLoot}");
         }
-        public static string GetValidInt()
+        public static int GetValidInt(string prompt)
         {
             // 1. Validate the prompt is a string
             // 2. Display the prompt
@@ -35,7 +36,7 @@ namespace ALootGenerator
             // - display an error message
             //  - go to step 2
             // 5. Otherwise, return the users input
-            return null;
+            return -1;
         }
         //TODO(jcollard: 2022-01-28): You should add a method stub for each of your methods. Here is an example:
 
@@ -44,7 +45,7 @@ namespace ALootGenerator
         /// </summary>
         /// <param name="prompt">The message to display to the user</param>
         /// <returns>TODO: The valid categories the user chose</returns>
-        public static int GetValidInt(string prompt)
+        public static string GenerateRandomLoot(string weapon, List<string> elements, List<string> powers)
         {
             // 1. Create a random number generator
 // 2. Generate a random number, first index, between 0 and weapons.Count
@@ -53,7 +54,7 @@ namespace ALootGenerator
 // 5. Combine the weapon, power, and element together
 //     - weapons[firstIndex] + " " + power[midIndex] + " " + element[lastIndex];
 // 6. Return the loot
-            return -1;
+            return null;
         }
     }
 }
