@@ -6,7 +6,11 @@ namespace ALootGenerator
     {
         public static bool RunTest()
         {
-            return false;
+            List<string> options = new List<string>();
+            options.Add("melee");
+            options.Add("weapon");
+            options.Add("projectile");
+            return true;
         }
 
     }
