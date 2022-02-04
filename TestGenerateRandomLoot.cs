@@ -21,7 +21,7 @@ namespace ALootGenerator
             string result = Program.GenerateRandomLoot("sword", elements, powers); 
             // int result = Program.GenerateRandomLoot("what type of weapon do you want?");
 
-            if (!result.StartsWith("sword fire Haki"))
+            if (!result.StartsWith("fire Haki sword "))
             {
                 Console.Error.WriteLine($"The result was expected to be {elements}, {powers}, sword");
                 return false;
