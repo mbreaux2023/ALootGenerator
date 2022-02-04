@@ -27,8 +27,13 @@ namespace ALootGenerator
             bool testGenerateRandomLoot = TestGenerateRandomLoot.RunTest();
             Console.WriteLine($"Test GenerateRandomLoot(options): {testGenerateRandomLoot}");
         }
+
+        // TODO(jcollard 2022-02-02): This method should probably named GenerateRandomLoot
+        // What options should it accept as parameters?
+        // I would suggest List<string> weapons, List<string> powers, List<string> elements
         public static int GetValidInt(string prompt)
         {
+            
             // 1. Validate the prompt is a string
             // 2. Display the prompt
             // 3. read input from the user 
@@ -47,6 +52,11 @@ namespace ALootGenerator
         /// <returns>TODO: The valid categories the user chose</returns>
         public static string GenerateRandomLoot(string weapon, List<string> elements, List<string> powers)
         {
+            // Feedback(jcollard 2022-02-02): This step-by-step algorithm does not seem
+            // to match the description above. This method's summary suggests it should
+            // be asking the user a question and then validating that they are entering
+            // an integer.
+
             // 1. Create a random number generator
 // 2. Generate a random number, first index, between 0 and weapons.Count
 // 3. Generate a random number, midIndex, between 0 and powers.count
