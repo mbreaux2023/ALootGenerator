@@ -9,6 +9,8 @@ namespace ALootGenerator
 
         public static bool RunTest()
         {
+            List<string> weapons = new List<string>();
+            weapons.Add("sword");
 
             List<string> elements = new List<string>();
             elements.Add("fire");
@@ -39,6 +41,21 @@ namespace ALootGenerator
 
             // 3. A test where you pass in a list that has 0 elements. What should happen in this case?
 
+            string result2 = Program.GenerateRandomLoot("fire", weapons, powers);
+
+            if (!result2.StartsWith("fire haki sword"))
+            {
+                Console.Error.WriteLine($"the result was expected to be fire {powers[0]}, {weapons}");
+                return false;
+            }
+
+            string result3 = Program.GenerateRandomLoot("haki", elements, weapons);
+            if (!result3.StartsWith("fire haki sword"))
+            {
+                Console.Error.WriteLine($"the result was expected to be haki {powers[0]}, {weapons}");
+                return false; 
+            }
+            
             return true;
         }
     }
