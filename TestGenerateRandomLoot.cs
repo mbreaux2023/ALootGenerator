@@ -17,7 +17,7 @@ namespace ALootGenerator
             // elements.Add("water");
             // elements.Add("lightning");
             List<string> powers = new List<string>();
-            elements.Add("Haki"); // TODO(jcollard 2022-02-04): This should be powers.Add
+            powers.Add("Haki"); // TODO(jcollard 2022-02-04): This should be powers.Add
             // elements.Add("Chakra");
             // elements.Add("Magic");
             string result = Program.GenerateRandomLoot("sword", elements, powers); 
