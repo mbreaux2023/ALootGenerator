@@ -41,7 +41,31 @@ namespace ALootGenerator
             // - display an error message
             //  - go to step 2
             // 5. Otherwise, return the users input
-            return -1;
+
+            int userChoice;
+
+            do
+            {
+                
+                Console.Write("Enter a number that is ") ;
+
+                string input = Console.ReadLine();
+                
+                bool isANumber = int.TryParse(input, out userChoice);
+
+                if (isANumber == false)
+                {
+                    Console.Error.WriteLine("you did not enter a number");
+                }
+                else if (userChoice >= 4)
+                {
+                    Console.WriteLine("That is not a number 1-3");
+                }
+            }
+            while (userChoice < 4);
+
+            return userChoice;
+
         }
         //TODO(jcollard: 2022-01-28): You should add a method stub for each of your methods. Here is an example:
 
