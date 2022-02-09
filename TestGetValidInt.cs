@@ -19,13 +19,6 @@ namespace ALootGenerator
                 return false;
             }
 
-            // TODO(jcollard 2022-02-04): A great first test. Now test another input.
-            // What should happen in this situation:
-            // * Test 2 more invalid inputs
-            // * Test 1 more valid input.
-
-            
-
             Console.WriteLine("the Method should display 'How many options would you like?'");
             Console.WriteLine("type 'banana'. You should see 'invalid!'");
             Console.WriteLine("then type '-12'. You should see invalid.");
