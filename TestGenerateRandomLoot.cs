@@ -45,7 +45,7 @@ namespace ALootGenerator
             // Look at all 3 cases you wrote, what pattern do you see? Do the patterns make sense with the
             // output?
 
-            string result2 = Program.GenerateRandomLoot("fire", weapons, powers);
+            string result2 = Program.GenerateRandomLoot(elements, weapons, powers);
 
             if (!result2.StartsWith("fire haki sword"))
             {
@@ -57,7 +57,7 @@ namespace ALootGenerator
             // Look at all 3 cases you wrote, what pattern do you see? Do the patterns make sense with the
             // output?
 
-            string result3 = Program.GenerateRandomLoot("haki", elements, weapons);
+            string result3 = Program.GenerateRandomLoot(powers, elements, weapons);
             if (!result3.StartsWith("fire haki sword"))
             {
                 Console.Error.WriteLine($"the result was expected to be haki {powers[0]}, {weapons}");

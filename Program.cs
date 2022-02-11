@@ -70,6 +70,16 @@ namespace ALootGenerator
         // TODO(jcollard 2022-02-02): This method should probably named GenerateRandomLoot
         // What options should it accept as parameters?
         // I would suggest List<string> weapons, List<string> powers, List<string> elements
+
+        /// <summary>
+        /// Given a number
+        /// </summary>
+        /// <param name="prompt"></param>
+        /// <returns></returns>
+        /// 
+        
+
+
         public static int GetValidInt(string prompt)
         {
 
@@ -80,6 +90,14 @@ namespace ALootGenerator
             // - display an error message
             //  - go to step 2
             // 5. Otherwise, return the users input
+
+            /// <summary>
+            /// given a method prompt to show the user, this method reads user input and checks if the input is an integer and if it falls between one and three. If it is than the method returns the user's choice
+            /// If the user does not input an integer then the program recognizes an error and prompts the user to try again.
+            /// If the user inputs an integer but it does not fall between 1 and 3 then the program recognizes an error and prompts the user to try again.
+            /// </summary>
+            /// <param name="prompt"></param>
+            /// This method prompts the user to select a number between one and three and then returns the users choice
 
             int userChoice;
 
@@ -138,6 +156,12 @@ namespace ALootGenerator
             // little tricky but I've created an example that I hope will help:
             // https://jcollard.github.io/IntroToCSharpSite/examples/random-dog-generator
 
+            /// <summary>
+            /// This method takes in a number from the user and generates random loot from the list in the main method. 
+            /// </summary>
+            /// <returns></returns>
+            /// 
+
             Random generator = new Random();
             int index = generator.Next(0, weapons.Count);
 
@@ -154,7 +178,7 @@ namespace ALootGenerator
 
             int index3 = generator.Next(0, powers.Count);
 
-            string randomPowers = elements[index3];
+            string randomPowers =powers[index3];
             // Console.WriteLine($"You got {randomPowers}");
             
             return $"{randomWeapons} {randomElements} {randomPowers}";
