@@ -16,6 +16,12 @@ namespace ALootGenerator
             }
 
             // other wise, the program continues executing
+
+            // TODO(jcollard 2022-02-11):
+            // 1. Prompt the user to get their input from GetValidInt
+            // 2. Create an Elements List
+            // 3. Create a Powers List
+            // 4. Call GenerateRandomLoot with the proper arguments
         }
 
 
