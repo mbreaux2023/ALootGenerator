@@ -9,7 +9,7 @@ namespace ALootGenerator
         {
             // Checks if the user added a command line argument
             // Also checks if the first argument is "test"
-            if (args.Length > 0 && args [0] == "test")
+            if (args.Length > 0 && args[0] == "test")
             {
                 TestAll();
                 return; // exits the program
@@ -23,7 +23,7 @@ namespace ALootGenerator
         {
             bool testGetValidInt = TestGetValidInt.RunTest();
             Console.WriteLine($"Test GetValidInt(filename): {testGetValidInt}");
-            
+
             bool testGenerateRandomLoot = TestGenerateRandomLoot.RunTest();
             Console.WriteLine($"Test GenerateRandomLoot(options): {testGenerateRandomLoot}");
         }
@@ -33,7 +33,7 @@ namespace ALootGenerator
         // I would suggest List<string> weapons, List<string> powers, List<string> elements
         public static int GetValidInt(string prompt)
         {
-            
+
             // 1. Validate the prompt is a string
             // 2. Display the prompt
             // 3. read input from the user 
@@ -46,23 +46,23 @@ namespace ALootGenerator
 
             do
             {
-                
-                Console.Write("Enter a number that is ") ;
+
+                Console.Write("Enter a number that is ");
 
                 string input = Console.ReadLine();
-                
+
                 bool isANumber = int.TryParse(input, out userChoice);
 
                 if (isANumber == false)
                 {
                     Console.Error.WriteLine("you did not enter a number");
                 }
-                else if (userChoice >= 4)
+                else if (userChoice >= 4) //TODO(jcollard 2022-02-11): What if the user selects 0? or -5?
                 {
                     Console.WriteLine("That is not a number 1-3");
                 }
             }
-            while (userChoice < 4);
+            while (userChoice < 4); //TODO(jcollard 2022-02-11): Are you sure you should keep looping if the user selected a number less than 4?
 
             return userChoice;
 
@@ -82,12 +82,16 @@ namespace ALootGenerator
             // an integer.
 
             // 1. Create a random number generator
-// 2. Generate a random number, first index, between 0 and weapons.Count
-// 3. Generate a random number, midIndex, between 0 and powers.count
-// 4. Generate a random number, lastIndex, between 0 and elements.count
-// 5. Combine the weapon, power, and element together
-//     - weapons[firstIndex] + " " + power[midIndex] + " " + element[lastIndex];
-// 6. Return the loot
+            // 2. Generate a random number, first index, between 0 and weapons.Count
+            // 3. Generate a random number, midIndex, between 0 and powers.count
+            // 4. Generate a random number, lastIndex, between 0 and elements.count
+            // 5. Combine the weapon, power, and element together
+            //     - weapons[firstIndex] + " " + power[midIndex] + " " + element[lastIndex];
+            // 6. Return the loot
+
+            // TODO(jcollard 2022-02-11): You're almost done! This method is a
+            // little tricky but I've created an example that I hope will help:
+            // https://jcollard.github.io/IntroToCSharpSite/examples/random-dog-generator
             return null;
         }
     }
