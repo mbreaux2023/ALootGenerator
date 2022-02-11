@@ -19,9 +19,42 @@ namespace ALootGenerator
 
             // TODO(jcollard 2022-02-11):
             // 1. Prompt the user to get their input from GetValidInt
-            // 2. Create an Elements List
+            int combos = GetValidInt("How many loot combinations would you like out of 3?");
+
+
+            List<string> weapons = new List<string>();
+            weapons.Add("sword");
+            weapons.Add("Mace");
+            weapons.Add("Pistol");
+            weapons.Add("bow");
+            weapons.Add("dagger");
+            weapons.Add("rifle");
+            weapons.Add("revolver");
+
+            // 2. Create an Elements List 
+            List<string> elements = new List<string>();
+            elements.Add("fire");
+            elements.Add("water");
+            elements.Add("lightning");
+            elements.Add("dark");
+            elements.Add("light");
+            elements.Add("earth");
+
+            List<string> powers = new List<string>();
+            powers.Add("magic");
+            powers.Add("chakra");
+            powers.Add("nen");
+            powers.Add("chi");
+
             // 3. Create a Powers List
             // 4. Call GenerateRandomLoot with the proper arguments
+            while (combos > 0)
+            {
+
+                string loot = GenerateRandomLoot(weapons, elements, powers);
+                Console.WriteLine($"You got {loot}");
+                combos = combos - 1;
+            }
         }
 
 
@@ -53,7 +86,7 @@ namespace ALootGenerator
             do
             {
 
-                Console.Write("Enter a number that is ");
+                Console.Write(prompt);
 
                 string input = Console.ReadLine();
 
@@ -63,12 +96,18 @@ namespace ALootGenerator
                 {
                     Console.Error.WriteLine("you did not enter a number");
                 }
+            
                 else if (userChoice >= 4) //TODO(jcollard 2022-02-11): What if the user selects 0? or -5?
                 {
                     Console.WriteLine("That is not a number 1-3");
                 }
+
+                else if (userChoice < 0)
+                {
+                    Console.Error.WriteLine("That is not a number 1-3");
+                }
             }
-            while (userChoice < 4); //TODO(jcollard 2022-02-11): Are you sure you should keep looping if the user selected a number less than 4?
+            while (userChoice >= 4 || userChoice < 0); //TODO(jcollard 2022-02-11): Are you sure you should keep looping if the user selected a number less than 4?
 
             return userChoice;
 
@@ -80,7 +119,7 @@ namespace ALootGenerator
         /// </summary>
         /// <param name="prompt">The message to display to the user</param>
         /// <returns>TODO: The valid categories the user chose</returns>
-        public static string GenerateRandomLoot(string weapon, List<string> elements, List<string> powers)
+        public static string GenerateRandomLoot(List<string> weapons, List<string> elements, List<string> powers)
         {
             // Feedback(jcollard 2022-02-02): This step-by-step algorithm does not seem
             // to match the description above. This method's summary suggests it should
@@ -98,7 +137,27 @@ namespace ALootGenerator
             // TODO(jcollard 2022-02-11): You're almost done! This method is a
             // little tricky but I've created an example that I hope will help:
             // https://jcollard.github.io/IntroToCSharpSite/examples/random-dog-generator
-            return null;
+
+            Random generator = new Random();
+            int index = generator.Next(0, weapons.Count);
+
+            string randomWeapons = weapons[index];
+            // Console.WriteLine($"You got a {randomWeapons}");
+
+            
+
+
+            int index2 = generator.Next(0, elements.Count);
+
+            string randomElements = elements[index2];
+            // Console.WriteLine($"You got {randomElements}");
+
+            int index3 = generator.Next(0, powers.Count);
+
+            string randomPowers = elements[index3];
+            // Console.WriteLine($"You got {randomPowers}");
+            
+            return $"{randomWeapons} {randomElements} {randomPowers}";
         }
     }
 }

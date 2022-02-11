@@ -20,7 +20,7 @@ namespace ALootGenerator
             powers.Add("Haki"); // TODO(jcollard 2022-02-04): This should be powers.Add
             // elements.Add("Chakra");
             // elements.Add("Magic");
-            string result = Program.GenerateRandomLoot("sword", elements, powers); 
+            string result = Program.GenerateRandomLoot(weapons, elements, powers); 
             // int result = Program.GenerateRandomLoot("what type of weapon do you want?");
 
             if (!result.StartsWith("fire Haki sword "))
