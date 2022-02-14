@@ -19,6 +19,7 @@ namespace ALootGenerator
 
             // TODO(jcollard 2022-02-11):
             // 1. Prompt the user to get their input from GetValidInt
+            
             int combos = GetValidInt("How many loot combinations would you like out of 3?");
 
 
@@ -106,7 +107,7 @@ namespace ALootGenerator
 
             if (prompt == null)
             {
-                // TODO: throw an exception
+                throw new Exception("Can not ask a null prompt");
             }
 
             int userChoice;
@@ -174,6 +175,7 @@ namespace ALootGenerator
 
             Random generator = new Random();
             int index = generator.Next(0, weapons.Count);
+
 
             string randomWeapons = weapons[index];
             // Console.WriteLine($"You got a {randomWeapons}");

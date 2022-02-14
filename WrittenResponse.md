@@ -87,7 +87,7 @@ Describes what the data contained in the list represents in your program
 
 The list represents all the possible weapons that can be generated.
 
-**TODO: Write a sentence describing what is stored in the list**
+
 
 ### 3b v.
 
@@ -95,13 +95,9 @@ Explains how the selected list manages complexity in your program code by
 explaining why your program code could not be written, or how it would be
 written differently, if you did not use the list.
 
-Without a list, I would not be able to select a weapon by generating a random index. Instead, I would need to write 5 lines of code per each weapon I want to add If i wanted to add any.
 
-Without a list, the complexity of my program would greatly increase unnecessarily because every time I want to add a weapon, I would need several more lines of add where as with this list I could just add in one line of code to the list making it more difficult to manage.
+Without a list, the complexity of my program would greatly increase because I would need an if statement for each option where as with the list I don't need any if statements.
 
-Without a list, it would be difficult but not impossible to have a selection of weapons since there would be no random index. If I wanted to add more possibilities it would make the process very redundant and not efficient. In order to manage
-
-My list makes managing complexity a lot easier
 
 
 ## 3c.
@@ -126,7 +122,7 @@ public static int GetValidInt(string prompt)
 
             if (prompt == null)
             {
-                // TODO: throw an exception
+                throw new Exception("Can not ask a null prompt");
             }
 
             int userChoice;
@@ -170,19 +166,12 @@ The second program code segment must show where your student-developed procedure
 int combos = GetValidInt("How many loot combinations would you like out of 3?");
 ```
 
-### 3c iii. *
+### 3c iii. 
 
-Describes in general what the identified procedure does and how it contributes to the overall functionality of the program. *
+Describes in general what the identified procedure does and how it contributes to the overall functionality of the program. 
 
-   /// <summary>
-            /// given a method prompt to show the user, this method reads user input and checks if the input is an integer and if it falls between one and three. If it is than the method returns the user's choice
-            /// If the user does not input an integer then the program recognizes an error and prompts the user to try again.
-            /// If the user inputs an integer but it does not fall between 1 and 3 then the program recognizes an error and prompts the user to try again.
-            /// </summary>
-            /// <param name="prompt"></param>
-            /// This method prompts the user to select a number between one and three and then returns the users choice
-
-
+            Given a message prompt to show the user, this method reads user input and checks if the input is an integer and if it falls between one and three. If it is then the method returns the user's choice.
+            
 ### 3c iv.
 
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
@@ -233,11 +222,11 @@ I am testing if the prompt the use has inputted is not null. THis will skip the 
 Result of the first call:
 
 
-The result of calling with a string that is null in an exception being thrown/
+The result of calling with a string that is null in an exception being thrown.
 **TODO: Complete this section**
 
 Result of the second call:
 
-THe result of calling with a string that is validated*
+THe result of calling with a string that is valid results in the message being displayed and waits for the user's input.
 
 **TODO: Complete this section**
