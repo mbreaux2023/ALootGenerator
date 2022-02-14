@@ -92,7 +92,22 @@ namespace ALootGenerator
             //  - go to step 2
             // 5. Otherwise, return the users input
 
-           
+            // TODO(jcollard 2022-02-12): This should go above the method signature (rather than inside the method)
+            /// <summary>
+            /// given a method prompt to show the user, this method reads user input and checks if the input is an integer and if it falls between one and three. If it is than the method returns the user's choice
+            /// If the user does not input an integer then the program recognizes an error and prompts the user to try again.
+            /// If the user inputs an integer but it does not fall between 1 and 3 then the program recognizes an error and prompts the user to try again.
+            /// </summary>
+            /// <param name="prompt"></param>
+            /// This method prompts the user to select a number between one and three and then returns the users choice
+            
+            // TODO(jcollard 2022-02-12): This looks great. However, to meet the requirements for proficient you need to validate
+            // the parameter input (prompt). Something like this:
+
+            if (prompt == null)
+            {
+                // TODO: throw an exception
+            }
 
             int userChoice;
 
